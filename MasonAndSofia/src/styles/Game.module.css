@@ -1,0 +1,46 @@
+
+
+.phoneContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+}
+
+.img {
+    width: 47rem;
+    height: auto;
+    display: block;
+}
+
+.goodBtn {
+    width: 7rem;
+    height: auto;
+    position: absolute;
+
+    bottom: 17rem;
+    right: 13rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.goodBtn:hover {
+    transform: translateY(-5px);
+}
+
+.badBtn {
+    width: 7rem;
+    height: auto;
+    position: absolute;
+
+    bottom: 17rem;
+    left: 13rem;
+    cursor: pointer;
+    transition: 0.3s
+}
+
+.badBtn:hover {
+    transform: translateY(-5px);
+}

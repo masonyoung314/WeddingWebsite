@@ -1,18 +1,35 @@
 .navIcon {
-    margin: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
     text-decoration: none;
     color: black;
     transition: 0.3s;
     font-family: cursive;
     font-size: 2rem;
+    align-items: center;
 }
 
 .navIcon:hover {
     cursor: pointer;
-    color: pink;
+    color: #FF94DB;
+    text-decoration: underline;
+    transform: translateY(-5px);
 }
 
 
 .navbar {
     position: sticky;
+    background-color: #F5F5DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.navLinks {
+    display: flex;
+}
+
+#one {
+    font-size: 3rem;
 }
