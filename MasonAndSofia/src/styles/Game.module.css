@@ -1,4 +1,7 @@
-
+.gameWrapper {
+    min-height: 100vh;
+    background-color: #F5F5DC;
+}
 
 .phoneContainer {
     position: relative;
@@ -43,4 +46,19 @@
 
 .badBtn:hover {
     transform: translateY(-5px);
+}
+
+.dress {
+    width: 20rem;
+    height: auto;
+    position: absolute;
+
+    bottom: 40rem;
+    
+}
+
+.winnerMessage {
+    position: absolute;
+
+    bottom: 50rem;
 }

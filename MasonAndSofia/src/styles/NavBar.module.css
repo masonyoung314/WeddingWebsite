@@ -1,3 +1,8 @@
+.navLinks {
+    display: flex;
+    align-items: center;
+}
+
 .navIcon {
     margin-left: 5rem;
     margin-right: 5rem;
@@ -6,7 +11,6 @@
     transition: 0.3s;
     font-family: cursive;
     font-size: 2rem;
-    align-items: center;
 }
 
 .navIcon:hover {
@@ -26,10 +30,8 @@
     padding: 1.5rem 0;
 }
 
-.navLinks {
-    display: flex;
-}
 
-#one {
-    font-size: 3rem;
+
+.navIcon.largeTitle {
+    font-size: 5rem;
 }
