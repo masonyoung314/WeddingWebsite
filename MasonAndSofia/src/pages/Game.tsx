@@ -19,6 +19,7 @@ function Game({}: Props) {
   const [currDress, setCurrDress] = useState(one);
   const [winner, setWinner] = useState("");
   const [dresses, setDresses] = useState([one, two, three, four, five]);
+  const [goodDresses, setGoodDresses] = useState([]);
 
   function chooseImg(arr: string[]) {
     const numDresses: number = arr.length;
@@ -31,35 +32,74 @@ function Game({}: Props) {
       choice = arr[idx];
     }
 
+    if (arr.length === 0) {
+      idx = Math.floor(Math.random() * goodDresses.length);
+      choice = goodDresses[idx];
+    }
+
     return choice;
   };
 
+  const resetArrays = () => {
+    setDresses(goodDresses);
+    setGoodDresses([]);
+  }
+
   const goodClick = () => {
 
-    if (dresses.length === 1) {
+    if (goodDresses.length === 1 && dresses.length === 0) {
       setWinner(dresses[0]);
       setCurrDress(dresses[0]);
       return;
     }
 
-    let newCurrDress = chooseImg(dresses);
+    let updatedDresses = dresses.filter(d => d !== currDress);
+    setDresses(updatedDresses);
+
+    if (updatedDresses.length === 0) {
+      resetArrays;
+    }
+
+    setGoodDresses(prevDresses => [...prevDresses, currDress]);
+    console.log(`Added ${currDress} to good dresses`);
+
+    let newCurrDress = chooseImg(updatedDresses);
     setCurrDress(newCurrDress);
 
+  };
+
+  const checkInDresses = (arr: string[], dress: string) => {
+    for (var i = 0; arr.length; i++) {
+      if (arr[i] == dress) {
+        return true;
+      }
+    }
+    return false;
   };
 
   const badClick = () => {
     const updatedDresses = dresses.filter(d => d !== currDress);
     setDresses(updatedDresses);
 
-    if (updatedDresses.length === 1) {
+    if (updatedDresses.length === 0 && goodDresses.length === 1) {
       setWinner(updatedDresses[0]);
       setCurrDress(updatedDresses[0]);
       return;
     }
 
+    if (updatedDresses.length === 0) {
+      resetArrays;
+    }
+
+    let updatedGoodDresses = [];
+    if (checkInDresses(goodDresses, currDress)) {
+      updatedGoodDresses = goodDresses.filter(d => d !== currDress);
+      console.log(`Removed ${currDress} from goodDresses`);
+      setGoodDresses(updatedGoodDresses);
+    }
+
     let newCurrDress = chooseImg(updatedDresses);
     setCurrDress(newCurrDress);
-
   };
 
   return (
