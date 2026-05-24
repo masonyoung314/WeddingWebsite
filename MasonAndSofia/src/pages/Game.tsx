@@ -41,35 +41,56 @@ function Game({}: Props) {
   };
 
   const resetArrays = () => {
-    setDresses(goodDresses);
+    setDresses([...goodDresses]);
     setGoodDresses([]);
   }
 
   const goodClick = () => {
 
-    if (goodDresses.length === 1 && dresses.length === 0) {
-      setWinner(dresses[0]);
-      setCurrDress(dresses[0]);
-      return;
-    }
-
     let updatedDresses = dresses.filter(d => d !== currDress);
     setDresses(updatedDresses);
 
-    if (updatedDresses.length === 0) {
-      resetArrays;
-    }
+    let updatedGoodDresses: string[] = goodDresses.slice(0);
+    updatedGoodDresses.push(currDress);
 
-    setGoodDresses(prevDresses => [...prevDresses, currDress]);
+    setGoodDresses(updatedGoodDresses);
     console.log(`Added ${currDress} to good dresses`);
 
-    let newCurrDress = chooseImg(updatedDresses);
+    console.log("Printing good dresses");
+    for (var i = 0; i < updatedGoodDresses.length; i++) {
+      console.log(updatedGoodDresses[i]);
+    }
+    console.log(`UpdatedDresses length = ${updatedDresses.length}`);
+    console.log(`updatedGoodDresses length = ${updatedGoodDresses.length}`);
+
+
+    if (updatedDresses.length === 0 && updatedGoodDresses.length === 1) {
+      console.log("Setting winner in good dresses");
+      setWinner(updatedGoodDresses[0]);
+      setCurrDress(updatedGoodDresses[0]);
+      return;
+    }
+
+    if (updatedDresses.length === 0) {
+      console.log("Resetting arrays in good click");
+      resetArrays();
+    }
+
+    let newCurrDress: string = "";
+
+    if (updatedDresses.length !== 0) {
+      newCurrDress = chooseImg(updatedDresses);
+    }
+    else {
+      newCurrDress = chooseImg(updatedGoodDresses);
+    }
+    
     setCurrDress(newCurrDress);
 
   };
 
   const checkInDresses = (arr: string[], dress: string) => {
-    for (var i = 0; arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
       if (arr[i] == dress) {
         return true;
       }
@@ -78,27 +99,37 @@ function Game({}: Props) {
   };
 
   const badClick = () => {
+    console.log("Got into badClick function");
     const updatedDresses = dresses.filter(d => d !== currDress);
     setDresses(updatedDresses);
+    console.log("Updated dresses in badClick");
 
     if (updatedDresses.length === 0 && goodDresses.length === 1) {
-      setWinner(updatedDresses[0]);
-      setCurrDress(updatedDresses[0]);
+      setWinner(goodDresses[0]);
+      setCurrDress(goodDresses[0]);
+      console.log("And we have a winner... stemming from badClick");
       return;
     }
 
-    if (updatedDresses.length === 0) {
-      resetArrays;
-    }
-
-    let updatedGoodDresses = [];
+    let updatedGoodDresses: string[] = goodDresses.slice(0);
     if (checkInDresses(goodDresses, currDress)) {
-      updatedGoodDresses = goodDresses.filter(d => d !== currDress);
+      updatedGoodDresses = updatedGoodDresses.filter(d => d !== currDress);
       console.log(`Removed ${currDress} from goodDresses`);
       setGoodDresses(updatedGoodDresses);
     }
 
-    let newCurrDress = chooseImg(updatedDresses);
+    if (updatedDresses.length === 0) {
+      console.log("Trying to reset arrays");
+      resetArrays();
+    }
+
+    let newCurrDress: string = "";
+    if (updatedDresses.length !== 0) {
+      newCurrDress = chooseImg(updatedDresses);
+    }  
+    else {
+      newCurrDress = chooseImg(updatedGoodDresses);
+    }
     setCurrDress(newCurrDress);
   };
 
