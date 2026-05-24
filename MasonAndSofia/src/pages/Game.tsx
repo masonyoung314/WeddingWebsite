@@ -20,6 +20,7 @@ function Game({}: Props) {
   const [winner, setWinner] = useState("");
   const [dresses, setDresses] = useState([one, two, three, four, five]);
   const [goodDresses, setGoodDresses] = useState([]);
+  const [round, setRound] = useState(1);
 
   function chooseImg(arr: string[]) {
     const numDresses: number = arr.length;
@@ -74,6 +75,7 @@ function Game({}: Props) {
     if (updatedDresses.length === 0) {
       console.log("Resetting arrays in good click");
       resetArrays();
+      setRound(round + 1);
     }
 
     let newCurrDress: string = "";
@@ -121,6 +123,7 @@ function Game({}: Props) {
     if (updatedDresses.length === 0) {
       console.log("Trying to reset arrays");
       resetArrays();
+      setRound(round + 1);
     }
 
     let newCurrDress: string = "";
@@ -144,6 +147,11 @@ function Game({}: Props) {
           name="saveForm"
           onClick={goodClick} 
           className={styles.goodBtn} />}
+
+          {(winner == "") && <h1 className={styles.round}>
+            Round {round}
+            </h1>}
+
           {(winner == "") && <input 
           type="image" 
           src={bad} 

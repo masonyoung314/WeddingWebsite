@@ -60,5 +60,11 @@
 .winnerMessage {
     position: absolute;
 
-    bottom: 50rem;
+    bottom: 55rem;
+}
+
+.round {
+    position: absolute;
+
+    bottom: 55rem;
 }
