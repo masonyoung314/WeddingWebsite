@@ -19,7 +19,7 @@ function Game({}: Props) {
   const [currDress, setCurrDress] = useState(one);
   const [winner, setWinner] = useState("");
   const [dresses, setDresses] = useState([one, two, three, four, five]);
-  const [goodDresses, setGoodDresses] = useState([]);
+  const [goodDresses, setGoodDresses] = useState<string[]>([]);
   const [round, setRound] = useState(1);
 
   function chooseImg(arr: string[]) {

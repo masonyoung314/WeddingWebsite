@@ -15,17 +15,17 @@ body {
 
 .smallLinks {
     display: flex;
-    gap: 4rem;
+    gap: 5rem;
 }
 
 .smallLinks:first-child {
     justify-content: flex-end;
-    margin-right: 4rem;
+    margin-right: 5rem;
 }
 
 .smallLinks:last-child {
     justify-content: flex-start;
-    margin-left: 4rem;
+    margin-left: 5rem;
 }
 
 .navIcon {
