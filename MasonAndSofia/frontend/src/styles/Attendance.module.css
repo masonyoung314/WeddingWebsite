@@ -1,0 +1,13 @@
+h1 {
+    display: flex;
+    text-decoration: underline;
+    text-align: center;
+    justify-content: center;
+}
+
+li {
+    font-size: 2rem;
+    /* font-family: cursive; */
+    
+}
+
