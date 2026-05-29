@@ -58,20 +58,22 @@ const Attendance = () => {
   }, []);
 
   if (loading) {
-    return (<p>Page loading...</p>)
+    return (<p style={{marginTop:'0'}}>Page loading...</p>)
   }
   if (error) {
-    return <p style={{color:'red'}}>Error: {error}</p>
+    return <p style={{color:'red', marginTop:'0'}}>Error: {error}</p>
   }
   return (
     <>
     <div className={styles.attendanceScreen}>
-      <h1>Guest List</h1>
-      <ul style={{listStyle: 'none'}}>
+      <h1 className={styles.guestHeader}>Guest List</h1>
+      <p className={styles.guestInstructions}>(Just click the box next to your name to let us know you're coming!)</p>
+      <ul style={{listStyle: 'none'}} className={styles.checkboxesContainer}>
         {guests.map((guest) => (
-          <li key={guest.id}>
-            <label>
+          <li key={guest.id} className={styles.checkboxes}>
+            <label className={styles.label}>
               <input type='checkbox' checked={guest.attending} onChange={(e) => handleBoxChange(guest.id, e.target.checked)} />
+              <span className={styles.checkbox}></span>
               {guest.name}
             </label>
           </li>
