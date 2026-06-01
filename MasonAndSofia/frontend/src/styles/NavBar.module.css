@@ -48,4 +48,28 @@ body {
 .navIcon.largeTitle {
     font-size: 5rem;
     white-space: nowrap;
+    border: none;
+}
+
+.navButton {
+    width: 2rem;
+    height: 2rem;
+    /* background-color: #FF94DB; */
+    display: flex;
+    position: absolute;
+    top: 3rem;
+    right: 4rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navButton:hover {
+    transform: translateY(-5px);
+}
+
+.burgerBtn {
+    transition: transform 0.5s;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
 }
