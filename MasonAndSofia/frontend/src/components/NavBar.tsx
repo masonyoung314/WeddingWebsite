@@ -3,22 +3,24 @@ import styles from "../styles/NavBar.module.css";
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import btn from '../assets/realBurger.png';
-import { motion, AnimatePresence } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 
 type Props = {}
 
-let rotation = 0;
+let rotation: number = 0;
 
 const spinBtn = () => {
-  const btn = document.getElementById("burgerBtn");
+  const btn: HTMLElement | null = document.getElementById("burgerBtn");
   rotation += 360;
   btn.style.transform = `rotate(${rotation}deg)`;
 }
 
 const NavBar = (props: Props) => {
-  const [isBtnSelected, setBtnSelected] = useState<boolean>(false);
+  const [isBtnSelected, setBtnSelected] = useState<boolean>(true);
 
   const handleBurgerClick = () => {
+    const nav: HTMLElement | null = document.getElementById("nav");
+
     if (isBtnSelected) {
       setBtnSelected(false);
       console.log(isBtnSelected);
@@ -34,16 +36,28 @@ const NavBar = (props: Props) => {
     <>
       <div className={styles.navbar}>
             <div className={styles.smallLinks}>
-              {isBtnSelected && <Link to="/info" className={styles.navIcon}>Information</Link>}
-              {isBtnSelected && <Link to="/game" className={styles.navIcon}>Games</Link>}
+              <AnimatePresence>
+                {isBtnSelected && <motion.div initial= {{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={styles.smallLinks}>
+                  <Link to="/info" className={styles.navIcon}>Information</Link>
+                  <Link to="/game" className={styles.navIcon}>Games</Link>
+                </motion.div>}
+              </AnimatePresence>
             </div>
-          
-            <Link to="/" className={`${styles.navIcon} ${styles.largeTitle}`} style={{fontSize: '3rem'}}>Mason and Sofia</Link>
+      
+            <div>
+              <Link to="/" className={`${styles.navIcon} ${styles.largeTitle}`} style={{fontSize: '3rem'}}>Mason and Sofia</Link>
+            </div>
 
             <div className={styles.smallLinks}>
-              {isBtnSelected && <Link to="/registry" className={styles.navIcon}>Registry</Link>}
-              {isBtnSelected && <Link to="/attendance" className={styles.navIcon}>Attendance</Link>}
+              <AnimatePresence>
+                {isBtnSelected && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={styles.smallLinks}>
+                  <Link to="/registry" className={styles.navIcon}>Registry</Link>
+                  <Link to="/attendance" className={styles.navIcon}>Attendance</Link>
+                </motion.div>}
+              </AnimatePresence>
             </div>
+            
+            
       </div>
       <div className={styles.navButton}>
         <input 

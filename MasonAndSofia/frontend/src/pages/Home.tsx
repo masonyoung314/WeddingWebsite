@@ -1,11 +1,14 @@
 import React from 'react';
-
+import Countdown from '../components/Countdown';
 
 type Props = {}
 
 const Home = (props: Props) => {
   return (
-    <div>Picture of invitations coming soon</div>
+    <>
+      <Countdown />
+      <div>Picture of invitations coming soon</div>
+    </>
   )
 }
 
