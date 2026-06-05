@@ -81,7 +81,7 @@ const Countdown = () => {
             <h2 className={styles.colon}>:</h2>
             <div className={styles.numSpace}>{time?.min1}</div>
             <div className={styles.numSpace}>{time?.min2}</div>
-            <div className={styles.colon}>:</div>
+            <h2 className={styles.colon}>:</h2>
             <div className={styles.numSpace}>{time?.sec1}</div>
             <div className={styles.numSpace}>{time?.sec2}</div>
         </div>

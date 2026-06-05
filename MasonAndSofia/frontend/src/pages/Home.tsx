@@ -1,13 +1,16 @@
 import React from 'react';
 import Countdown from '../components/Countdown';
+import styles from '../styles/index.module.css';
 
 type Props = {}
 
 const Home = (props: Props) => {
   return (
     <>
-      <Countdown />
-      <div>Picture of invitations coming soon</div>
+      <div className={styles.homePage}>
+        <Countdown />
+        <div>Picture of invitations coming soon</div>
+      </div>
     </>
   )
 }
