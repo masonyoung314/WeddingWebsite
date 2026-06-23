@@ -1,4 +1,23 @@
 .homePage {
     min-height: 100vh;
-    background-color: beige;
+    background-color: #FFB8D1;
+}
+
+
+.images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.saveDate1 {
+    width: 35rem;
+    height: auto;
+    margin: 2rem;
+}
+
+.saveDate2 {
+    width: 35rem;
+    height: auto;
+    margin: 0rem;
 }

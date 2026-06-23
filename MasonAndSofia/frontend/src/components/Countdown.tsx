@@ -126,9 +126,9 @@ const Countdown = () => {
 
   return (
     <>
-        <div className={styles.title}>
+        {/* <div className={styles.title}>
             <h2>Countdown until the big day!</h2>
-        </div>
+        </div> */}
 
         <div className={styles.clockSpace}>
             <div className={styles.numSpace} id="day1">{time?.day1}</div>
