@@ -59,7 +59,7 @@ const NavBar = (props: Props) => {
             
             
       </div>
-      <div className={styles.navButton}>
+      {/* <div className={styles.navButton}>
         <input 
         type="image"
         src={btn}
@@ -68,7 +68,7 @@ const NavBar = (props: Props) => {
         className={styles.burgerBtn}
         id="burgerBtn"
         />
-      </div>
+      </div> */}
     </>
   )
 }
