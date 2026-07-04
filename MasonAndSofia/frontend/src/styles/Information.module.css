@@ -1,0 +1,27 @@
+p {
+    margin: 0;
+}
+
+.arriveTitle {
+    text-decoration: underline;
+    padding-top: 2rem;
+}
+
+.infoPage {
+    min-height: 100vh;
+    min-width: 100vh;
+    background-color: #FFB8D1;
+    display: block;
+    text-align: center;
+}
+
+.locationDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.address {
+    padding-bottom: 20rem;
+}

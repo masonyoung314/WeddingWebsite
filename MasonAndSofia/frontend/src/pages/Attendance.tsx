@@ -74,6 +74,7 @@ const Attendance = () => {
             <label className={styles.label}>
               <input type='checkbox' checked={guest.attending} onChange={(e) => handleBoxChange(guest.id, e.target.checked)} />
               <span className={styles.checkbox}></span>
+              <span className={styles.checkbox}></span>
               {guest.name}
             </label>
           </li>
