@@ -14,9 +14,9 @@
 .label {
     display: grid;
     align-items: center;
-    grid-template-columns: 2.5rem 1fr;
+    grid-template-columns:  20rem auto 1fr 1fr;
     /* gap: 1rem; */
-    column-gap: 1.25rem;
+    column-gap: 1rem;
     cursor: pointer;
 }
 
@@ -55,7 +55,21 @@
     flex-shrink: 0;
 }
 
+.checkboxTwo {
+    height: 2rem;
+    width: 2rem;
+    background-color: beige;
+    position: relative;
+    border: 2px solid black;
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+
 .checkboxes:hover input ~ .checkbox{
+    background-color: khaki;
+}
+
+.checkboxes:hover input ~ .checkboxTwo {
     background-color: khaki;
 }
 
@@ -63,8 +77,16 @@
     background-color: #B6DB00;
 }
 
+.checkboxes input:checked ~.checkboxTwo {
+    background-color: red;
+}
+
 .checkboxes:hover input:checked ~.checkbox {
     background-color: #A0C000;
+}
+
+.checkboxes:hover input:checked ~.checkboxTwo {
+    background-color: #bf0000;
 }
 
 .checkbox:after {
@@ -73,7 +95,17 @@
     position: absolute;
 }
 
+.checkboxTwo:after {
+    content: "";
+    display: none;
+    position: absolute;
+}
+
 .checkboxes input:checked ~.checkbox:after {
+    display: block;
+}
+
+.checkboxes input:checked ~.checkboxTwo:after {
     display: block;
 }
 
@@ -89,6 +121,26 @@
   transform: rotate(45deg);
 }
 
+
+.checkboxes .checkboxTwo::before,
+.checkboxes .checkboxTwo::after {
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    top: 0.9rem;
+    width: 1.2rem;
+    height: 3px;
+    background: white;
+    transform-origin: center;
+}
+
+.checkboxes .checkboxTwo::before {
+    transform: rotate(45deg);
+}
+
+.checkboxes .checkboxTwo::after {
+    transform: rotate(-45deg);
+}
 
 .guestInstructions {
     display: flex;

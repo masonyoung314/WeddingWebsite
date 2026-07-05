@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ChangeEvent } from 'react';
 import { collection, query, orderBy, onSnapshot, serverTimestamp } from 'firebase/firestore';
 import type { DocumentData } from 'firebase/firestore';
 import { doc, updateDoc } from 'firebase/firestore';
@@ -12,7 +12,10 @@ type Guest = {
   attending: boolean;
 };
 
-const handleBoxChange = async (id: string, isChecked: boolean) => {
+const handleBoxChange = async (e: ChangeEvent<HTMLInputElement>, id: string, isChecked: boolean) => {
+
+  
+
   try {
     const guest = doc(db, 'attendees', id);
     await updateDoc(guest, {
@@ -58,7 +61,7 @@ const Attendance = () => {
   }, []);
 
   if (loading) {
-    return (<p style={{marginTop:'0'}}>Page loading...</p>)
+    return (<p style={{minHeight: '100vh', marginTop:'0', backgroundColor: '#FFB8D1'}}>Page loading...</p>)
   }
   if (error) {
     return <p style={{color:'red', marginTop:'0'}}>Error: {error}</p>
@@ -72,10 +75,11 @@ const Attendance = () => {
         {guests.map((guest) => (
           <li key={guest.id} className={styles.checkboxes}>
             <label className={styles.label}>
+              {guest.name}
               <input type='checkbox' checked={guest.attending} onChange={(e) => handleBoxChange(guest.id, e.target.checked)} />
               <span className={styles.checkbox}></span>
-              <span className={styles.checkbox}></span>
-              {guest.name}
+              <input type='checkbox' checked={!guest.attending} onChange={(e) => handleBoxChange(guest.id, e.target.checked)}/>
+              <span className={styles.checkboxTwo}></span>
             </label>
           </li>
         ))}
