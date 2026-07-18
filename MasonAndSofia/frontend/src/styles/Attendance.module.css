@@ -83,11 +83,13 @@
 
 .checkboxes:hover input:checked ~.checkbox {
     background-color: #A0C000;
-}
+} 
+
 
 .checkboxes:hover input:checked ~.checkboxTwo {
     background-color: #bf0000;
 }
+
 
 .checkbox:after {
     content: "";

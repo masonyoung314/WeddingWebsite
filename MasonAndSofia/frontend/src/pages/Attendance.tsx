@@ -14,7 +14,7 @@ type Guest = {
 
 const handleBoxChange = async (e: ChangeEvent<HTMLInputElement>, id: string, isChecked: boolean) => {
 
-  
+
 
   try {
     const guest = doc(db, 'attendees', id);
@@ -76,9 +76,9 @@ const Attendance = () => {
           <li key={guest.id} className={styles.checkboxes}>
             <label className={styles.label}>
               {guest.name}
-              <input type='checkbox' checked={guest.attending} onChange={(e) => handleBoxChange(guest.id, e.target.checked)} />
+              <input type='checkbox' checked={guest.attending} onChange={(e) => handleBoxChange(e, guest.id, e.target.checked)} />
               <span className={styles.checkbox}></span>
-              <input type='checkbox' checked={!guest.attending} onChange={(e) => handleBoxChange(guest.id, e.target.checked)}/>
+              <input type='checkbox' checked={!guest.attending} onChange={(e) => handleBoxChange(e, guest.id, e.target.checked)}/>
               <span className={styles.checkboxTwo}></span>
             </label>
           </li>
