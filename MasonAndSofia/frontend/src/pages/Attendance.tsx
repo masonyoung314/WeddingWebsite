@@ -12,10 +12,7 @@ type Guest = {
   attending: boolean;
 };
 
-const handleBoxChange = async (e: ChangeEvent<HTMLInputElement>, id: string, isChecked: boolean) => {
-
-
-
+const handleBoxChange = async (id: string, isChecked: boolean) => {
   try {
     const guest = doc(db, 'attendees', id);
     await updateDoc(guest, {
@@ -74,11 +71,17 @@ const Attendance = () => {
       <ul style={{listStyle: 'none'}} className={styles.checkboxesContainer}>
         {guests.map((guest) => (
           <li key={guest.id} className={styles.checkboxes}>
-            <label className={styles.label}>
+            <label className={styles.guestNameLabel}>
               {guest.name}
-              <input type='checkbox' checked={guest.attending} onChange={(e) => handleBoxChange(e, guest.id, e.target.checked)} />
+            </label>
+
+            <label className={styles.checkboxLabel}>
+              <input type='radio' checked={guest.attending === true} onChange={() => handleBoxChange(guest.id, true)} />
               <span className={styles.checkbox}></span>
-              <input type='checkbox' checked={!guest.attending} onChange={(e) => handleBoxChange(e, guest.id, e.target.checked)}/>
+            </label>
+
+            <label className={styles.checkboxLabel}>
+              <input type='radio' checked={guest.attending === false} onChange={() => handleBoxChange(guest.id, false)}/>
               <span className={styles.checkboxTwo}></span>
             </label>
           </li>

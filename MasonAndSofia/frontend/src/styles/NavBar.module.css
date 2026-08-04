@@ -51,7 +51,7 @@ body {
 .navIcon:hover {
     cursor: pointer;
     /* color: #FF94DB; */
-    color: beige;
+    color: #722F37;
     text-decoration: underline;
     transform: translateY(-5px);
 }

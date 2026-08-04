@@ -1,4 +1,3 @@
-import React from 'react';
 import Countdown from '../components/Countdown';
 import styles from '../styles/index.module.css';
 import one from '../assets/saveTheDate1.png';
@@ -6,16 +5,29 @@ import two from '../assets/saveTheDate2.png';
 
 type Props = {}
 
+// const imageOne = document.getElementById("imgOne");
+// const imageTwo = document.getElementById("imgTwo");
+
+// imageOne?.addEventListener('mousemove', (e:MouseEvent) => {
+//   const rectangle = imageOne.getBoundingClientRect();
+
+//   const x = e.clientX - rectangle.left;
+//   const y = e.clientY - rectangle.top;
+
+
+
+// });
+
+
 const Home = (props: Props) => {
   return (
     <>
       <div className={styles.homePage}>
         <Countdown />
         <div className={styles.images}>
-          <img className={styles.saveDate1} src={one} />
-          <img className={styles.saveDate2} src={two} />
+          <img className={styles.saveDate1} src={one} id="imgOne"/>
+          <img className={styles.saveDate2} src={two} id="imgTwo"/>
         </div>
-        <div>Picture of invitations coming soon</div>
       </div>
     </>
   )
