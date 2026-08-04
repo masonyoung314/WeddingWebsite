@@ -1,36 +1,37 @@
-import React from 'react';
 import styles from "../styles/NavBar.module.css";
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import btn from '../assets/realBurger.png';
+import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 
 type Props = {}
 
-let rotation: number = 0;
+// let rotation: number = 0;
 
-const spinBtn = () => {
-  const btn: HTMLElement | null = document.getElementById("burgerBtn");
-  rotation += 360;
-  btn.style.transform = `rotate(${rotation}deg)`;
-}
+// const spinBtn = () => {
+//   const btn: HTMLElement | null = document.getElementById("burgerBtn")!;
+//   rotation += 360;
+//   btn.style.transform = `rotate(${rotation}deg)`;
+// }
 
-const NavBar = (props: Props) => {
+function NavBar({}: Props) {
   const [isBtnSelected, setBtnSelected] = useState<boolean>(true);
+  useEffect(() => {
+    setBtnSelected(true);
+  }, []);
 
-  const handleBurgerClick = () => {
-    const nav: HTMLElement | null = document.getElementById("nav");
+  // const handleBurgerClick = () => {
+  //   const nav: HTMLElement | null = document.getElementById("nav");
 
-    if (isBtnSelected) {
-      setBtnSelected(false);
-      console.log(isBtnSelected);
-      spinBtn();
-    }
-    else {
-      setBtnSelected(true);
-      spinBtn();
-    }
-  }
+  //   if (isBtnSelected) {
+  //     setBtnSelected(false);
+  //     console.log(isBtnSelected);
+  //     spinBtn();
+  //   }
+  //   else {
+  //     setBtnSelected(true);
+  //     spinBtn();
+  //   }
+  // }
 
   return (
     <>

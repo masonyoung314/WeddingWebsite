@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState, useEffect } from 'react';
 import styles from '../styles/Countdown.module.css';
 
@@ -66,42 +65,42 @@ const Countdown = () => {
 
     setTime(prevTime => {
       if (timeParts.day1 !== prevTime?.day1) {
-        const day1Square: HTMLElement | null = document.getElementById("day1");
+        const day1Square: HTMLElement | null = document.getElementById("day1")!;
         day1Rotation += 360;
         day1Square.style.transform = `rotate(${day1Rotation}deg)`;
       }
       if (timeParts.day2 !== prevTime?.day2) {
-        const day2Square: HTMLElement | null = document.getElementById("day2");
+        const day2Square: HTMLElement | null = document.getElementById("day2")!;
         day2Rotation += 360;
         day2Square.style.transform = `rotate(${day2Rotation}deg)`;
       }
       if (timeParts.day3 !== prevTime?.day3) {
-        const day3Square: HTMLElement | null = document.getElementById("day3");
+        const day3Square: HTMLElement | null = document.getElementById("day3")!;
         day3Rotation += 360;
         day3Square.style.transform = `rotate(${day3Rotation}deg)`;
       }
       if (timeParts.hour1 !== prevTime?.hour1) {
-        const hour1Square: HTMLElement | null = document.getElementById("hour1");
+        const hour1Square: HTMLElement | null = document.getElementById("hour1")!;
         hour1Rotation += 360;
         hour1Square.style.transform = `rotate(${hour1Rotation}deg)`;
       }
       if (timeParts.hour2 !== prevTime?.hour2) {
-        const hour2Square: HTMLElement | null = document.getElementById("hour2");
+        const hour2Square: HTMLElement | null = document.getElementById("hour2")!;
         hour2Rotation += 360;
         hour2Square.style.transform = `rotate(${hour2Rotation}deg)`;
       }
       if (timeParts.min1 !== prevTime?.min1) {
-        const min1Square: HTMLElement | null = document.getElementById("min1");
+        const min1Square: HTMLElement | null = document.getElementById("min1")!;
         min1Rotation += 360;
         min1Square.style.transform = `rotate(${min1Rotation}deg)`;
       }
       if (timeParts.min2 !== prevTime?.min2) {
-        const min2Square: HTMLElement | null = document.getElementById("min2");
+        const min2Square: HTMLElement | null = document.getElementById("min2")!;
         min2Rotation += 360;
         min2Square.style.transform = `rotate(${min2Rotation}deg)`;
       }
       if (timeParts.sec1 !== prevTime?.sec1) {
-        const sec1Square: HTMLElement | null = document.getElementById("sec1");
+        const sec1Square: HTMLElement | null = document.getElementById("sec1")!;
         sec1Rotation += 360;
         sec1Square.style.transform = `rotate(${sec1Rotation}deg)`;
       }
@@ -110,7 +109,7 @@ const Countdown = () => {
     });
 
     // sec2 always changes
-    const square: HTMLElement | null = document.getElementById("sec2");
+    const square: HTMLElement | null = document.getElementById("sec2")!;
     sec2Rotation += 360;
     square.style.transform = `rotate(${sec2Rotation}deg)`;
 

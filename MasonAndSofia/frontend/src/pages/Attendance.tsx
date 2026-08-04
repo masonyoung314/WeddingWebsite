@@ -1,4 +1,5 @@
-import { useState, useEffect, ChangeEvent } from 'react';
+import { useState, useEffect } from 'react';
+// import type { ChangeEvent } from 'react';
 import { collection, query, orderBy, onSnapshot, serverTimestamp } from 'firebase/firestore';
 import type { DocumentData } from 'firebase/firestore';
 import { doc, updateDoc } from 'firebase/firestore';

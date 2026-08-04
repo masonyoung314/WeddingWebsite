@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import phone from "../assets/Iphone.png";
 import styles from "../styles/Game.module.css";

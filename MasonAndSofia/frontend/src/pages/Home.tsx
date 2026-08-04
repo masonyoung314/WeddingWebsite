@@ -19,7 +19,7 @@ type Props = {}
 // });
 
 
-const Home = (props: Props) => {
+function Home({}: Props) {
   return (
     <>
       <div className={styles.homePage}>
