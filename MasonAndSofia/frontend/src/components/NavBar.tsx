@@ -2,65 +2,67 @@ import styles from "../styles/NavBar.module.css";
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
+import btn from "../assets/burgerBtn.png";
+import logo from "../assets/mason_and_sofia_logo.svg";
 
 type Props = {}
 
-// let rotation: number = 0;
+let rotation: number = 0;
 
-// const spinBtn = () => {
-//   const btn: HTMLElement | null = document.getElementById("burgerBtn")!;
-//   rotation += 360;
-//   btn.style.transform = `rotate(${rotation}deg)`;
-// }
+const spinBtn = () => {
+  const btn: HTMLElement | null = document.getElementById("burgerBtn")!;
+  rotation += 360;
+  btn.style.transform = `rotate(${rotation}deg)`;
+}
 
 function NavBar({}: Props) {
   const [isBtnSelected, setBtnSelected] = useState<boolean>(true);
   useEffect(() => {
-    setBtnSelected(true);
+    setBtnSelected(false);
   }, []);
 
-  // const handleBurgerClick = () => {
-  //   const nav: HTMLElement | null = document.getElementById("nav");
+  const handleBurgerClick = () => {
 
-  //   if (isBtnSelected) {
-  //     setBtnSelected(false);
-  //     console.log(isBtnSelected);
-  //     spinBtn();
-  //   }
-  //   else {
-  //     setBtnSelected(true);
-  //     spinBtn();
-  //   }
-  // }
+    if (isBtnSelected) {
+      setBtnSelected(false);
+      spinBtn();
+    }
+    else {
+      setBtnSelected(true);
+      spinBtn();
+    }
+  }
 
   return (
     <>
       <div className={styles.navbar}>
-            <div className={styles.smallLinks}>
+            
               <AnimatePresence>
-                {isBtnSelected && <motion.div initial= {{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={styles.smallLinks}>
+                <motion.div initial= {{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={`${styles.smallLinks} ${isBtnSelected ? styles.show : ""}`}>
                   <Link to="/info" className={styles.navIcon}>Information</Link>
                   <Link to="/game" className={styles.navIcon}>Games</Link>
-                </motion.div>}
+                </motion.div>
               </AnimatePresence>
-            </div>
+            
       
             <div>
-              <Link to="/" className={`${styles.navIcon} ${styles.largeTitle}`} style={{fontSize: '3rem'}}>Mason and Sofia</Link>
+              <Link to="/" className={`${styles.navIcon} ${styles.largeTitle}`} style={{fontSize: '3rem'}}>
+                <img src={logo} alt="Mason and Sofia" width="275rem" height="auto"/>
+              </Link>
             </div>
 
-            <div className={styles.smallLinks}>
+            
               <AnimatePresence>
-                {isBtnSelected && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={styles.smallLinks}>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={`${styles.smallLinks} ${isBtnSelected ? styles.show : ""}`}>
                   <Link to="/registry" className={styles.navIcon}>Registry</Link>
                   <Link to="/attendance" className={styles.navIcon}>Attendance</Link>
-                </motion.div>}
+                </motion.div>
               </AnimatePresence>
-            </div>
+            
             
             
       </div>
-      {/* <div className={styles.navButton}>
+      <div className={styles.navButton}>
         <input 
         type="image"
         src={btn}
@@ -69,7 +71,7 @@ function NavBar({}: Props) {
         className={styles.burgerBtn}
         id="burgerBtn"
         />
-      </div> */}
+      </div>
     </>
   )
 }

@@ -12,13 +12,15 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 1rem;
+    margin-top: -5rem;
 }
 
 .numSpace {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid #E75480;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
     height: 8rem;
     width: 8rem;
@@ -30,6 +32,7 @@ h2 {
     font-size: 4rem;
     color: white;
     transition: 0.4s;
+    margin-top: 4rem;
 }
 
 .numSpace:hover {

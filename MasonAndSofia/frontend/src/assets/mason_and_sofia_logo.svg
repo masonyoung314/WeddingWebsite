@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" width="1000" height="760">
+  <title>Mason &amp; Sofia Wedding Monogram</title>
+  <desc>White monochrome wedding monogram with M and S, diagonal divider, laurel branches, and Mason &amp; Sofia text.</desc>
+
+  <!-- Transparent background -->
+  <g fill="none" stroke="#E75480" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Main circular crest -->
+    <circle cx="500" cy="285" r="190" stroke-width="4"/>
+
+    <!-- Diagonal divider -->
+    <path d="M 405 385 L 595 195" stroke-width="4"/>
+
+    <!-- Left laurel branch -->
+    <path d="M 335 470
+             C 285 475, 245 455, 220 415
+             C 198 380, 190 340, 195 300" stroke-width="4"/>
+    <path d="M 270 462 C 258 430, 260 402, 274 378" stroke-width="3"/>
+    <path d="M 245 437 C 218 430, 198 414, 184 394" stroke-width="3"/>
+    <path d="M 225 405 C 198 395, 179 378, 167 357" stroke-width="3"/>
+    <path d="M 207 369 C 185 355, 171 337, 164 315" stroke-width="3"/>
+    <path d="M 201 329 C 181 313, 170 294, 168 272" stroke-width="3"/>
+
+    <!-- Left leaves -->
+    <path d="M 268 425 C 245 420, 228 408, 218 389 C 238 388, 256 398, 268 425 Z" stroke-width="3"/>
+    <path d="M 239 395 C 214 390, 196 378, 187 359 C 208 359, 226 370, 239 395 Z" stroke-width="3"/>
+    <path d="M 215 359 C 193 351, 178 337, 171 319 C 191 320, 206 333, 215 359 Z" stroke-width="3"/>
+    <path d="M 203 321 C 185 311, 174 297, 171 280 C 188 283, 200 296, 203 321 Z" stroke-width="3"/>
+
+    <!-- Right laurel branch -->
+    <path d="M 665 470
+             C 715 475, 755 455, 780 415
+             C 802 380, 810 340, 805 300" stroke-width="4"/>
+    <path d="M 730 462 C 742 430, 740 402, 726 378" stroke-width="3"/>
+    <path d="M 755 437 C 782 430, 802 414, 816 394" stroke-width="3"/>
+    <path d="M 775 405 C 802 395, 821 378, 833 357" stroke-width="3"/>
+    <path d="M 793 369 C 815 355, 829 337, 836 315" stroke-width="3"/>
+    <path d="M 799 329 C 819 313, 830 294, 832 272" stroke-width="3"/>
+
+    <!-- Right leaves -->
+    <path d="M 732 425 C 755 420, 772 408, 782 389 C 762 388, 744 398, 732 425 Z" stroke-width="3"/>
+    <path d="M 761 395 C 786 390, 804 378, 813 359 C 792 359, 774 370, 761 395 Z" stroke-width="3"/>
+    <path d="M 785 359 C 807 351, 822 337, 829 319 C 809 320, 794 333, 785 359 Z" stroke-width="3"/>
+    <path d="M 797 321 C 815 311, 826 297, 829 280 C 812 283, 800 296, 797 321 Z" stroke-width="3"/>
+  </g>
+
+  <!-- Monogram -->
+  <g fill="#E75480" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="425" y="305" font-size="142" font-weight="400">M</text>
+    <text x="575" y="420" font-size="142" font-weight="400">S</text>
+  </g>
+
+  <!-- Couple's names -->
+  <text x="500" y="590"
+        fill="#E75480"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="42"
+        font-weight="400"
+        letter-spacing="11"
+        text-anchor="middle">MASON &amp; SOFIA</text>
+</svg>

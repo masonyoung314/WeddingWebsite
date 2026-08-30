@@ -2,6 +2,8 @@ import Countdown from '../components/Countdown';
 import styles from '../styles/index.module.css';
 import one from '../assets/saveTheDate1.png';
 import two from '../assets/saveTheDate2.png';
+import both from '../assets/MasonAndSofiaEngagementForWeb.jpg';
+import NavBar from '../components/NavBar';
 
 type Props = {}
 
@@ -23,10 +25,11 @@ function Home({}: Props) {
   return (
     <>
       <div className={styles.homePage}>
+        <NavBar />
         <Countdown />
         <div className={styles.images}>
-          <img className={styles.saveDate1} src={one} id="imgOne"/>
-          <img className={styles.saveDate2} src={two} id="imgTwo"/>
+          {/* <img className={styles.saveDate1} src={one} id="imgOne"/>
+          <img className={styles.saveDate2} src={two} id="imgTwo"/> */}
         </div>
       </div>
     </>

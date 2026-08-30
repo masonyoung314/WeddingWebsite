@@ -8,6 +8,7 @@ import two from "../assets/coolThingTwo.jpeg";
 import three from "../assets/coolThingThree.jpg";
 import four from "../assets/coolThingFour.webp";
 import five from "../assets/coolThingFive.jpg";
+import NavBar from "../components/NavBar";
 
 type Props = {};
 
@@ -138,6 +139,7 @@ function Game({}: Props) {
   return (
     <>
       <div className={styles.gameWrapper}>
+        <NavBar/>
         <div className={styles.phoneContainer}>
           <img src={phone} alt="Iphone Outline" className={styles.img}/>
           {(winner == "") && <input 

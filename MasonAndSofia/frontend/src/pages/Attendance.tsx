@@ -5,6 +5,7 @@ import type { DocumentData } from 'firebase/firestore';
 import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase.ts';
 import styles from "../styles/Attendance.module.css";
+import NavBar from '../components/NavBar.tsx';
 
 
 type Guest = {
@@ -67,6 +68,7 @@ const Attendance = () => {
   return (
     <>
     <div className={styles.attendanceScreen}>
+      <NavBar/>
       <h1 className={styles.guestHeader}>Guest List</h1>
       <p className={styles.guestInstructions}>(Just click the box next to your name to let us know you're coming!)</p>
       <ul style={{listStyle: 'none'}} className={styles.checkboxesContainer}>
