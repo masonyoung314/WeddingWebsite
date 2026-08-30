@@ -1,8 +1,8 @@
 import Countdown from '../components/Countdown';
 import styles from '../styles/index.module.css';
-import one from '../assets/saveTheDate1.png';
-import two from '../assets/saveTheDate2.png';
-import both from '../assets/MasonAndSofiaEngagementForWeb.jpg';
+// import one from '../assets/saveTheDate1.png';
+// import two from '../assets/saveTheDate2.png';
+// import both from '../assets/MasonAndSofiaEngagementForWeb.jpg';
 import NavBar from '../components/NavBar';
 
 type Props = {}
