@@ -133,7 +133,10 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     background-color: black;
-    z-index: 1000;
+    gap: 3rem;
+    z-index: 999;
+    position: fixed;
+    inset: 0;
 }
 
 
