@@ -150,7 +150,7 @@ body {
     inset: 0;
 
     animation-name: slideIn;
-    animation-duration: 0.2s;
+    animation-duration: 0.3s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
