@@ -99,6 +99,7 @@ body {
     right: 4rem;
     cursor: pointer;
     transition: 0.3s;
+    z-index: 1000;
 }
 
 .navButton:hover {
@@ -111,6 +112,7 @@ body {
     width: 2rem;
     height: 2rem;
     display: none;
+    cursor: pointer;
 }
 
 
@@ -141,6 +143,11 @@ img,video{max-width:100%;height:auto;}
     }
     .burgerBtn {
         display: block;
+        transition: transform 0.5s;
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
     }
     .smallLinks {
         display: none;
