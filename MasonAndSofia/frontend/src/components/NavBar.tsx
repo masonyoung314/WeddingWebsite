@@ -27,6 +27,8 @@ function NavBar({}: Props) {
   return (
     <>
       <div className={styles.navbar}>
+        <div className={`${styles.menuOptions} ${isBtnSelected ? styles.show : ""}`}>
+
             
               <AnimatePresence>
                 <motion.div initial= {{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={`${styles.smallLinks} ${isBtnSelected ? styles.show : ""}`}>
@@ -49,6 +51,7 @@ function NavBar({}: Props) {
                   <Link to="/attendance" className={styles.navIcon}>Attendance</Link>
                 </motion.div>
               </AnimatePresence>
+        </div>
       </div>
       <div className={styles.navButton}>
         <input 
