@@ -71,6 +71,9 @@ img,video{max-width:100%;height:auto;}
     gap: 0;
     padding: 0;
   }
+  .colon {
+    font-size: 3rem;
+  }
 }
 @media (max-width:480px){
   body{overflow-x:hidden;}

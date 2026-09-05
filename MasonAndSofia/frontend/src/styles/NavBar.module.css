@@ -81,6 +81,12 @@ body {
     /* transform: translateY(-5px); */
 }
 
+.hide {
+}
+
+.navbar.hide {
+    display: none;
+}
 
 .navIcon.largeTitle {
     /* font-size: 5rem; */
@@ -115,6 +121,10 @@ body {
     cursor: pointer;
 }
 
+.menuOptions {
+    display: none;
+}
+
 .menuOptions.show {
     display: flex;
     flex-direction: column;
@@ -123,7 +133,7 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     background-color: black;
-    
+    z-index: 1000;
 }
 
 

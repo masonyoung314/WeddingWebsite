@@ -26,8 +26,7 @@ function NavBar({}: Props) {
 
   return (
     <>
-      <div className={styles.navbar}>
-        <div className={`${styles.menuOptions} ${isBtnSelected ? styles.show : ""}`}>
+      <div className={`${styles.navbar} ${isBtnSelected ? styles.hide : ""}`}>
 
             
               <AnimatePresence>
@@ -51,7 +50,6 @@ function NavBar({}: Props) {
                   <Link to="/attendance" className={styles.navIcon}>Attendance</Link>
                 </motion.div>
               </AnimatePresence>
-        </div>
       </div>
       <div className={styles.navButton}>
         <input 
@@ -62,6 +60,17 @@ function NavBar({}: Props) {
         className={styles.burgerBtn}
         id="burgerBtn"
         />
+      </div>
+
+      <div className={`${styles.menuOptions} ${isBtnSelected ? styles.show : ""}`}>
+        <Link to="/" className={`${styles.navIcon} ${styles.largeTitle}`} style={{fontSize: '3rem'}}>
+                <img src={logo} alt="Mason and Sofia" width="275rem" height="auto"/>
+        </Link>
+        <Link to="/info" className={styles.navIcon}>Information</Link>
+        <Link to="/game" className={styles.navIcon}>Games</Link>
+        <Link to="/registry" className={styles.navIcon}>Registry</Link>
+        <Link to="/attendance" className={styles.navIcon}>Attendance</Link>
+
       </div>
     </>
   )
