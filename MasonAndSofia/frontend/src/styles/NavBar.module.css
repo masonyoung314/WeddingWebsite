@@ -21,7 +21,7 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     box-sizing: border-box;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     z-index: 100;
     margin: 0;
@@ -113,12 +113,23 @@ body {
 }
 
 .burgerBtn {
-    transition: transform 0.5s;
+    transition: transform 0.2s;
     cursor: pointer;
     width: 2rem;
     height: 2rem;
     display: none;
     cursor: pointer;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .menuOptions {
@@ -137,7 +148,13 @@ body {
     z-index: 999;
     position: fixed;
     inset: 0;
+
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
+
 
 
 /* Responsive additions */

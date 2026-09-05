@@ -9,7 +9,7 @@ p {
 
 .infoPage {
     min-height: 100vh;
-    min-width: 100vh;
+    min-width: 100vw;
     background-color: #FFB8D1;
     display: block;
     text-align: center;
@@ -39,6 +39,7 @@ img,video{max-width:100%;height:auto;}
   .navbar,.nav,.links{flex-wrap:wrap!important;gap:.75rem!important;}
   [class*="grid"]{grid-template-columns:1fr!important;}
   [class*="card"]{width:100%!important;}
+
 }
 @media (max-width:480px){
   body{overflow-x:hidden;}
