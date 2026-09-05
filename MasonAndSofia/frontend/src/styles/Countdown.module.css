@@ -72,7 +72,7 @@ img,video{max-width:100%;height:auto;}
     padding: 0;
   }
   .colon {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 @media (max-width:480px){
