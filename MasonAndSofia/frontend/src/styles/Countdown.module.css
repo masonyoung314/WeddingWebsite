@@ -42,7 +42,13 @@ h2 {
 
 .colon {
     font-size: 5rem;
-    color: white
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8rem;
+    margin: 0 0 0.25rem;
+    transform: translateY(20px);
 }
 
 
@@ -73,6 +79,7 @@ img,video{max-width:100%;height:auto;}
   }
   .colon {
     font-size: 2rem;
+    transform: translateY(20px);
   }
 }
 @media (max-width:480px){
