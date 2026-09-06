@@ -13,6 +13,9 @@
     margin: auto;
 }
 
+.hidden{
+}
+
 .img {
     width: 47rem;
     height: auto;
@@ -131,4 +134,22 @@ img,video{max-width:100%;height:auto;}
 @media (max-width:480px){
   body{overflow-x:hidden;}
   *{max-width:100%;}
+
+    .round {
+    position: absolute;
+    bottom: 35rem;
+  }
+
+  .winnerMessage {
+    position: absolute;
+    bottom: 35rem;
+  }
+
+  .goodBtn {
+    right: 7rem;
+  }
+
+  .badBtn {
+    left: 7rem;
+  }
 }
