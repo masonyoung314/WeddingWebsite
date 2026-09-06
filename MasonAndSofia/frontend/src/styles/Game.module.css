@@ -1,5 +1,6 @@
 .gameWrapper {
     min-height: 100vh;
+    min-width: 100vw;
     background-color: #FFB8D1;
 }
 
@@ -82,6 +83,50 @@ img,video{max-width:100%;height:auto;}
   .navbar,.nav,.links{flex-wrap:wrap!important;gap:.75rem!important;}
   [class*="grid"]{grid-template-columns:1fr!important;}
   [class*="card"]{width:100%!important;}
+  .img {
+    width: 100vw;
+  }
+
+  .goodBtn {
+    width: 4rem;
+    height: auto;
+    position: absolute;
+
+    bottom: 10rem;
+    right: 8rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .badBtn {
+    width: 4rem;
+    height: auto;
+    position: absolute;
+
+    bottom: 10rem;
+    left: 8rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .dress {
+    width: 13rem;
+    height: auto;
+    position: absolute;
+    bottom: 25rem;
+  }
+
+  .round {
+    position: absolute;
+    bottom: 40rem;
+  }
+
+  .winnerMessage {
+    position: absolute;
+    bottom: 40rem;
+  }
+
+
 }
 @media (max-width:480px){
   body{overflow-x:hidden;}
