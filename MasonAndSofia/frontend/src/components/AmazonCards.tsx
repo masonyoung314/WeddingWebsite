@@ -8,7 +8,9 @@ interface cardProps {
 const AmazonCards = ({amazonLink, picture} : cardProps) => {
   return (
     <div className={styles.card}>
-        <img src={picture} className={styles.productImg} />
+        <div className={styles.imgDiv}>
+            <img src={picture} className={styles.productImg} />
+        </div>
         <div className={styles.buySection}>
             <a href={amazonLink} className={styles.buyBtn}>
                 Buy
