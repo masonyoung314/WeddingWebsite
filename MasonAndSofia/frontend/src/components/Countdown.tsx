@@ -16,7 +16,7 @@ const Countdown = () => {
   };
 
   const [time, setTime] = useState<timeRemaining | null>(null);
-  const weddingDate: string = '2027-09-03T23:59:59-04:00';
+  const weddingDate: string = '2027-06-25T23:59:59-04:00';
 
   let day1Rotation: number = 0;
   let day2Rotation: number = 0;
