@@ -1,7 +1,8 @@
 .homePage {
     min-height: 100vh;
     background-color: #FFB8D1;
-    background-image: url('../assets/MasonAndSofiaEngagementForWeb.jpg');
+    /* background-image: url('../assets/MasonAndSofiaEngagementForWeb.jpg'); */
+    background-image: url('../assets/1-223.jpg');
     /* background-image: url('../assets/OtherEngagementPhoto.jpg'); */
     background-position: center;
     background-size: cover;
@@ -44,4 +45,7 @@ img,video{max-width:100%;height:auto;}
 @media (max-width:480px){
   body{overflow-x:hidden;}
   *{max-width:100%;}
+  .homePage {
+    background-position: -33rem;
+  }
 }
