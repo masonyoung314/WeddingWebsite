@@ -1,7 +1,24 @@
 .registryPage {
     min-height: 100vh;
-    min-width: 100vh;
+    min-width: 100vw;
     background-color: #FFB8D1;
+}
+
+.registryBelowNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.registryCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.footer {
+  bottom: 0;
+  margin-top: 2rem;
 }
 
 /* Responsive additions */
