@@ -153,3 +153,89 @@ img,video{max-width:100%;height:auto;}
     left: 7rem;
   }
 }
+
+@media (max-width: 414px) {
+  .round {
+    position: absolute;
+    bottom: 33rem;
+  }
+  
+  .winnerMessage {
+    position: absolute;
+    bottom: 33rem;
+  }
+
+  .dress {
+    width: 11rem;
+    height: auto;
+    bottom: 22rem;
+  }
+
+  .goodBtn {
+    bottom: 8rem;
+  }
+
+  .badBtn {
+    bottom: 8rem;
+  }
+}
+
+@media (max-width: 400px) {
+    body{overflow-x:hidden;}
+  *{max-width:100%;}
+
+   .round {
+    position: absolute;
+    bottom: 30rem;
+  }
+
+  .winnerMessage {
+    position: absolute;
+    bottom: 30rem;
+  }
+
+  .goodBtn {
+    right: 5.5rem;
+    bottom: 7rem;
+  }
+
+  .badBtn {
+    left: 5.5rem;
+    bottom: 7rem;
+  }
+  .dress {
+    bottom: 20rem;
+    width: 10rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 344px) {
+      body{overflow-x:hidden;}
+  *{max-width:100%;}
+
+   .round {
+    position: absolute;
+    bottom: 27rem;
+  }
+
+  .winnerMessage {
+    position: absolute;
+    bottom: 27rem;
+  }
+
+  .goodBtn {
+    right: 5.1rem;
+    bottom: 7rem;
+  }
+
+  .badBtn {
+    left: 5.1rem;
+    bottom: 7rem;
+  }
+  .dress {
+    bottom: 20rem;
+    width: 10rem;
+    height: auto;
+  }
+}
