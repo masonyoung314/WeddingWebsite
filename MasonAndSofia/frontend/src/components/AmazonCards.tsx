@@ -11,11 +11,13 @@ const AmazonCards = ({amazonLink, picture} : cardProps) => {
         <div className={styles.imgDiv}>
             <img src={picture} className={styles.productImg} />
         </div>
-        <div className={styles.buySection}>
-            <a href={amazonLink} className={styles.buyBtn}>
-                Buy
-            </a>
-        </div>
+        <a href={amazonLink} className={styles.link}> 
+            <div className={styles.buySection}>
+                <p className={styles.buyBtn}>
+                    Buy
+                </p>
+            </div>
+        </a>
     </div>
   )
 }

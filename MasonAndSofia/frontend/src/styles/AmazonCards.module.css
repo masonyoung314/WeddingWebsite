@@ -47,6 +47,11 @@
 }
 
 .buyBtn {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: #E75480;
+}
+
+.link {
+    text-decoration: none;
+    width: 100%;
 }
