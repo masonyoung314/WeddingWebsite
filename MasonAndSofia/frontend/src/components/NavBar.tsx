@@ -12,7 +12,7 @@ type Props = {}
 function NavBar({}: Props) {
   const [isBtnSelected, setBtnSelected] = useState<boolean>(false);
 
-  const [rotation, setRotation] = useState<number>(0);
+  const [rotation, setRotation] = useState<number>(360);
 
   const spinBtn = () => {
     const btn: HTMLElement | null = document.getElementById("burgerBtn")!;

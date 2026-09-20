@@ -145,7 +145,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     min-width: 100vw;
-    background-color: black;
+    background-color: #FFB8D1;
     gap: 3rem;
     z-index: 999;
     position: fixed;
