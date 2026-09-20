@@ -1,6 +1,6 @@
 .card {
-    width: 12rem;
-    height: 12rem;
+    width: 15rem;
+    height: 15rem;
     transition: 0.3s;
     background-color: white;
     /* border: 1px solid gray; */
@@ -42,7 +42,7 @@
 }
 
 .productImg {
-    width: 7rem;
+    width: 12rem;
     height: auto;
 }
 
