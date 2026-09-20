@@ -71,25 +71,28 @@ const Attendance = () => {
       <NavBar/>
       <h1 className={styles.guestHeader}>Guest List</h1>
       <p className={styles.guestInstructions}>(Just click the box next to your name to let us know you're coming!)</p>
-      <ul style={{listStyle: 'none'}} className={styles.checkboxesContainer}>
-        {guests.map((guest) => (
-          <li key={guest.id} className={styles.checkboxes}>
-            <label className={styles.guestNameLabel}>
-              {guest.name}
-            </label>
+      <div className={styles.actualAttendanceScreen} >
 
-            <label className={styles.checkboxLabel}>
-              <input type='radio' checked={guest.attending === true} onChange={() => handleBoxChange(guest.id, true)} />
-              <span className={styles.checkbox}></span>
-            </label>
+        <ul style={{listStyle: 'none'}} className={styles.checkboxesContainer}>
+          {guests.map((guest) => (
+            <li key={guest.id} className={styles.checkboxes}>
+              <label className={styles.guestNameLabel}>
+                {guest.name}
+              </label>
 
-            <label className={styles.checkboxLabel}>
-              <input type='radio' checked={guest.attending === false} onChange={() => handleBoxChange(guest.id, false)}/>
-              <span className={styles.checkboxTwo}></span>
-            </label>
-          </li>
-        ))}
-      </ul>
+              <label className={styles.checkboxLabel}>
+                <input type='radio' checked={guest.attending === true} onChange={() => handleBoxChange(guest.id, true)} />
+                <span className={styles.checkbox}></span>
+              </label>
+
+              <label className={styles.checkboxLabel}>
+                <input type='radio' checked={guest.attending === false} onChange={() => handleBoxChange(guest.id, false)}/>
+                <span className={styles.checkboxTwo}></span>
+              </label>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
     </>
   )
