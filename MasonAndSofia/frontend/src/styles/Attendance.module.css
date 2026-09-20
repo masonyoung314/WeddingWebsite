@@ -166,4 +166,4 @@ img,video{max-width:100%;height:auto;}
   .navbar,.nav,.links{flex-wrap:wrap!important;gap:.75rem!important;}
   [class*="grid"]{grid-template-columns:1fr!important;}
   [class*="card"]{width:100%!important;}
-}
+} 
