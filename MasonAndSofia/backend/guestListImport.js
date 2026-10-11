@@ -64,7 +64,10 @@ const guests = [
   { name: "Thomas Laskowski" },
   { name: "Mustafa Zirapury" },
   { name: "Vishal Dattathreya" },
-  { name: "Rohan Satapathy" }
+  { name: "Rohan Satapathy" },
+  { name: "Uncle Tom" },
+  {name: "Aunt Denise" },
+  
 ];
 
 
