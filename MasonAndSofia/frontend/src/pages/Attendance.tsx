@@ -36,7 +36,7 @@ const Attendance = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const q = query(collection(db, 'attendees'), orderBy('name'));
+    const q = query(collection(db, 'attendees'), orderBy('importOrder'));
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const guestData: Guest[] = [];

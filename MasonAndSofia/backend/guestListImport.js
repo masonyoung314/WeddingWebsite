@@ -31,6 +31,8 @@ const guests = [
   { name: "Ivanna" },
   { name: "June" },
   { name: "Desi" },
+
+  // English names
   { name: "Leslie Fox" },
   { name: "Jason Fox" },
   { name: "James Young" },
@@ -42,8 +44,6 @@ const guests = [
   { name: "Emily Brownell" },
   { name: "Uncle Scott" },
   { name: "Aunt Theresa" },
-  { name: "Sadie" },
-  { name: "Josh" },
   { name: "Aunt Amy" },
   { name: "Uncle Dan" },
   { name: "Sydney Herguth" },
@@ -62,7 +62,6 @@ const guests = [
   { name: "Jessie Genovese" },
   { name: "Mike Genovese" },
   { name: "Thomas Laskowski" },
-  { name: "Mohammed Vohra" },
   { name: "Mustafa Zirapury" },
   { name: "Vishal Dattathreya" },
   { name: "Rohan Satapathy" }
@@ -74,13 +73,14 @@ async function importGuests() {
   const batch = db.batch();
   const collectionRef = db.collection('attendees'); // Name of your Firestore collection
 
-  guests.forEach(guest => {
+  guests.forEach((guest, index) => {
     // You can set a custom document ID, e.g., based on email or a generated ID
     // For now, let Firestore generate a random ID
     const docRef = collectionRef.doc();
     batch.set(docRef, {
       name: guest.name,
       attending: false, // Default attendance status
+      importOrder: index,
       timestamp: admin.firestore.FieldValue.serverTimestamp() // Optional: add a creation timestamp
     });
   });
