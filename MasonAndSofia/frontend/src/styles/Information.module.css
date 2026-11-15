@@ -1,10 +1,15 @@
+@import url('https://googleapis.com');
+
 p {
     margin: 0;
 }
 
 .arriveTitle {
     text-decoration: underline;
-    padding-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #542D3B;
+    font-family: 'Cormorant', serif;
 }
 
 .infoPage {
@@ -23,8 +28,81 @@ p {
 }
 
 .address {
-    padding-bottom: 20rem;
+    padding-bottom: 2rem;
+    font-family: 'Cormorant', serif;
 }
+
+.elegantText, .longDressesText, .visitPin {
+    font-family: 'Cormorant', serif;
+}
+
+.pin {
+    transition: filter 0.3s ease;
+}
+
+.pin:hover {
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.dressCode {
+    text-decoration: underline;
+    padding-bottom: 1rem;
+    color: #542D3B;
+    font-family: 'Cormorant', serif;
+}
+
+/* .dressBullets {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+} */
+
+.dressInfoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}
+
+.visitPin {
+    padding-bottom: 1rem;
+    color: #542D3B;
+}
+
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #542D3B;
+    width: 95%;
+
+}
+
+.pinSection {
+    background-color: #FFF5F2;
+    border-radius: 1rem;
+    width: 95%;
+    margin-inline: auto;
+    /* padding-bottom: 1rem; */
+}
+
+.imagesDiv {
+    display: grid;
+    width: 75%;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 0.5rem;
+}
+
+.imageOne, .imageTwo, .imageThree {
+    transition: 0.3s;
+
+}
+
+.imageOne:hover, .imageTwo:hover, .imageThree:hover {
+    transform: translateY(-10px);
+}
+
 
 /* Responsive additions */
 *,*::before,*::after{box-sizing:border-box;}
