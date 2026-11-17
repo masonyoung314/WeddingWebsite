@@ -4,6 +4,9 @@ import AmazonCards from '../components/AmazonCards';
 import sheets from '../assets/purpleSheets.png';
 import oven from '../assets/smartOven.png';
 import creami from '../assets/creami.png';
+import printer from '../assets/printer.png';
+import airFryer from '../assets/airFryer.png';
+import blender from '../assets/blender.png';
 
 type Props = {}
 
@@ -18,6 +21,9 @@ function Registry({}: Props) {
             <AmazonCards amazonLink='https://amzn.to/4r7y4vh' picture={sheets} />
             <AmazonCards amazonLink='https://amzn.to/4ypwxTB' picture={oven} />
             <AmazonCards amazonLink='https://amzn.to/46vjq7P' picture={creami} />
+            <AmazonCards amazonLink='https://link.amazon/B03iCa2Us' picture={printer} />
+            <AmazonCards amazonLink='https://link.amazon/B07wKcUQi' picture={airFryer} />
+            <AmazonCards amazonLink='https://link.amazon/B0gEDeUcs' picture={blender} />
           </div>
           <div className={styles.footer}>As an Amazon Affiliate, I earn from qualifying purchases.</div>
         </div>
