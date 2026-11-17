@@ -3,12 +3,17 @@
     background-color: #FFB8D1;
 }
 
+.guestInstructions {
+    color: #542D3B;
+}
+
 .guestHeader {
     display: flex;
     text-decoration: underline;
     text-align: center;
     justify-content: center;
     margin-top: 0;
+    color: #542D3B;
 }
 
 .checkboxLabel {
@@ -38,6 +43,7 @@
     display: grid;
     align-items: center;
     grid-template-columns:  20rem auto auto;
+    width: 90%;
     column-gap: 1rem;
     font-size: 2rem;
     margin: 0.75rem 0;
@@ -54,16 +60,17 @@
     background-color: beige;
     position: relative;
     border: 2px solid black;
+    border-radius: 2rem;
     transition: 0.2s;
     flex-shrink: 0;
 }
 
 .checkboxLabel:hover .checkbox{
-    background-color: khaki;
+    background-color: gray;
 }
 
 .checkboxLabel:hover .checkboxTwo {
-    background-color: khaki;
+    background-color: gray;
 }
 
 .checkboxLabel input:checked + .checkbox {

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" role="img" aria-labelledby="title desc">
+  <title id="title">Mason and Sofia — airplane monogram</title>
+  <desc id="desc">An elegant dusty rose M and S monogram with a looping dotted airplane flight path ending in an airplane.</desc>
+
+  <!-- Dotted flight path: loops gently below the initials, then climbs toward the plane -->
+  <path d="M 245 420
+           C 174 478, 188 562, 278 570
+           C 390 580, 535 472, 665 360
+           C 712 320, 754 285, 792 250"
+        fill="none" stroke="#E94F83" stroke-width="5.5"
+        stroke-linecap="round" stroke-dasharray="1 17"/>
+
+  <!-- Monogram, set in Cormorant Garamond -->
+  <g fill="#E94F83" font-family="'Cormorant Garamond', 'Times New Roman', serif" font-weight="400">
+    <text x="315" y="385" font-size="246" letter-spacing="-12">M</text>
+    <text x="575" y="590" font-size="246">S</text>
+  </g>
+
+  <!-- Minimal airplane, nose pointing diagonally upward/right -->
+  <g transform="translate(796 247) rotate(48)" fill="#E94F83">
+    <path d="M 0 -56
+             C 5 -56 8 -52 9 -45
+             L 12 -8
+             L 65 20
+             C 70 23 69 29 63 28
+             L 12 18
+             L 12 48
+             L 29 62
+             C 33 65 31 69 26 68
+             L 0 59
+             L -26 68
+             C -31 69 -33 65 -29 62
+             L -12 48
+             L -12 18
+             L -63 28
+             C -69 29 -70 23 -65 20
+             L -12 -8
+             L -9 -45
+             C -8 -52 -5 -56 0 -56 Z"/>
+  </g>
+</svg>

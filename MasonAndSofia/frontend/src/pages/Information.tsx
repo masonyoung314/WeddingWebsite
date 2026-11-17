@@ -30,11 +30,6 @@ const Information = () => {
         <div className={styles.dressInfoDiv}> 
           <h1 className={styles.dressCode}>Dress Code</h1>
           <h3 className={styles.elegantText} style={{color: "#8C113D", paddingBottom: "1rem"}}><i>Elegant & Colorful</i></h3>
-          {/* <ul className={styles.dressBullets}>
-            <li>Elegant</li>
-            <li>Long</li>
-            <li>Vibrant colors</li>
-          </ul> */}
           <div className={styles.imagesDiv}>
             <img className={styles.imageOne} src={outfitOne} style={{width: "400px", height: "700px", borderRadius:"1rem"}} />
             <img className={styles.imageTwo} src={outfitTwo} style={{width: "400px", height: "700px", borderRadius:"1rem"}} />

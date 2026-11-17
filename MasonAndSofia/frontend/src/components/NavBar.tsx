@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import btn from "../assets/burgerBtn.png";
 import logo from "../assets/mason_and_sofia_logo.svg";
+import newLogo from "../assets/mason_and_sofia_airplane_monogram_cormorant_dotted.svg";
 
 type Props = {}
 
@@ -39,7 +40,7 @@ function NavBar({}: Props) {
       
             <div>
               <Link to="/" className={`${styles.navIcon} ${styles.largeTitle}`} style={{fontSize: '3rem'}}>
-                <img src={logo} alt="Mason and Sofia" width="275rem" height="auto"/>
+                <img src={newLogo} alt="Mason and Sofia" width="275rem" height="auto"/>
               </Link>
             </div>
 

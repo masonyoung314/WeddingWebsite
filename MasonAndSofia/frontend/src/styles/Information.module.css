@@ -1,4 +1,4 @@
-@import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap');
 
 p {
     margin: 0;
@@ -29,7 +29,9 @@ p {
 
 .address {
     padding-bottom: 2rem;
+    padding-top: 2rem;
     font-family: 'Cormorant', serif;
+    color: #542D3B;
 }
 
 .elegantText, .longDressesText, .visitPin {
@@ -82,9 +84,8 @@ p {
 .pinSection {
     background-color: #FFF5F2;
     border-radius: 1rem;
-    width: 95%;
+    width: 30%;
     margin-inline: auto;
-    /* padding-bottom: 1rem; */
 }
 
 .imagesDiv {
