@@ -84,7 +84,7 @@ p {
 .pinSection {
     background-color: #FFF5F2;
     border-radius: 1rem;
-    width: 30%;
+    width: 75%;
     margin-inline: auto;
 }
 
@@ -102,6 +102,14 @@ p {
 
 .imageOne:hover, .imageTwo:hover, .imageThree:hover {
     transform: translateY(-10px);
+}
+
+.imagesDivContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 
 
