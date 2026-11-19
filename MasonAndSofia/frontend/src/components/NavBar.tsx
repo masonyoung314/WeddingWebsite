@@ -9,6 +9,8 @@ type Props = {}
 
 // let rotation: number = 0;
 
+let showGames: boolean = false;
+
 function NavBar({}: Props) {
   const [isBtnSelected, setBtnSelected] = useState<boolean>(false);
 
@@ -32,7 +34,8 @@ function NavBar({}: Props) {
               <AnimatePresence>
                 <motion.div initial= {{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={`${styles.smallLinks} ${isBtnSelected ? styles.show : ""}`}>
                   <Link to="/info" className={styles.navIcon}>Information</Link>
-                  <Link to="/game" className={styles.navIcon}>Games</Link>
+                  {showGames && <Link to="/game" className={styles.navIcon}>Games</Link>}
+                  <Link to="/travel" className={styles.navIcon}>Travel Tips</Link>
                 </motion.div>
               </AnimatePresence>
             
