@@ -1,11 +1,11 @@
 import styles from "../styles/NavBar.module.css";
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import btn from "../assets/burgerBtn.png";
 import newLogo from "../assets/mason_and_sofia_airplane_monogram_cormorant_dotted.svg";
 
-type Props = {}
+type Props = {};
 
 // let rotation: number = 0;
 
@@ -20,63 +20,113 @@ function NavBar({}: Props) {
     const btn: HTMLElement | null = document.getElementById("burgerBtn")!;
     setRotation(rotation + 360);
     btn.style.transform = `rotate(${rotation}deg)`;
-  }
+  };
   const handleBurgerClick = () => {
     setBtnSelected(!isBtnSelected);
     spinBtn();
-  }
+  };
 
   return (
     <>
       <div className={`${styles.navbar} ${isBtnSelected ? styles.hide : ""}`}>
-
-            
-              <AnimatePresence>
-                <motion.div initial= {{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={`${styles.smallLinks} ${isBtnSelected ? styles.show : ""}`}>
-                  <Link to="/info" className={styles.navIcon}>Information</Link>
-                  {showGames && <Link to="/game" className={styles.navIcon}>Games</Link>}
-                  <Link to="/travel" className={styles.navIcon}>Travel Tips</Link>
-                </motion.div>
-              </AnimatePresence>
-            
-      
-            <div>
-              <Link to="/" className={`${styles.navIcon} ${styles.largeTitle}`} style={{fontSize: '3rem'}}>
-                <img src={newLogo} alt="Mason and Sofia" width="275rem" height="auto"/>
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className={`${styles.smallLinks} ${isBtnSelected ? styles.show : ""}`}
+          >
+            <Link to="/info" className={styles.navIcon}>
+              Information
+            </Link>
+            {showGames && (
+              <Link to="/game" className={styles.navIcon}>
+                Games
               </Link>
-            </div>
+            )}
+            <Link to="/travel" className={styles.navIcon}>
+              Travel Tips
+            </Link>
+          </motion.div>
+        </AnimatePresence>
 
-            
-              <AnimatePresence>
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={`${styles.smallLinks} ${isBtnSelected ? styles.show : ""}`}>
-                  <Link to="/registry" className={styles.navIcon}>Registry</Link>
-                  <Link to="/attendance" className={styles.navIcon}>Attendance</Link>
-                </motion.div>
-              </AnimatePresence>
+        <div>
+          <Link
+            to="/"
+            className={`${styles.navIcon} ${styles.largeTitle}`}
+            style={{ fontSize: "3rem" }}
+          >
+            <img
+              src={newLogo}
+              alt="Mason and Sofia"
+              width="275rem"
+              height="auto"
+            />
+          </Link>
+        </div>
+
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className={`${styles.smallLinks} ${isBtnSelected ? styles.show : ""}`}
+          >
+            <Link to="/registry" className={styles.navIcon}>
+              Registry
+            </Link>
+            <Link to="/attendance" className={styles.navIcon}>
+              Attendance
+            </Link>
+          </motion.div>
+        </AnimatePresence>
       </div>
       <div className={styles.navButton}>
-        <input 
-        type="image"
-        src={btn}
-        name="burgerMenu"
-        onClick={handleBurgerClick}
-        className={styles.burgerBtn}
-        id="burgerBtn"
+        <input
+          type="image"
+          src={btn}
+          name="burgerMenu"
+          onClick={handleBurgerClick}
+          className={styles.burgerBtn}
+          id="burgerBtn"
         />
       </div>
 
-      <div className={`${styles.menuOptions} ${isBtnSelected ? styles.show : ""}`}>
-        <Link to="/" className={`${styles.navIcon} ${styles.largeTitle}`} style={{fontSize: '3rem'}}>
-                <img src={newLogo} alt="Mason and Sofia" width="275rem" height="auto"/>
+      <div
+        className={`${styles.menuOptions} ${isBtnSelected ? styles.show : ""}`}
+      >
+        <Link
+          to="/"
+          className={`${styles.navIcon} ${styles.largeTitle}`}
+          style={{ fontSize: "3rem" }}
+        >
+          <img
+            src={newLogo}
+            alt="Mason and Sofia"
+            width="275rem"
+            height="auto"
+          />
         </Link>
-        <Link to="/info" className={styles.navIcon}>Information</Link>
-        <Link to="/game" className={styles.navIcon}>Games</Link>
-        <Link to="/registry" className={styles.navIcon}>Registry</Link>
-        <Link to="/attendance" className={styles.navIcon}>Attendance</Link>
-
+        <Link to="/info" className={styles.navIcon}>
+          Information
+        </Link>
+        {showGames && (
+          <Link to="/game" className={styles.navIcon}>
+            Games
+          </Link>
+        )}
+        <Link to="/travel" className={styles.navIcon}>
+          Travel Tips
+        </Link>
+        <Link to="/registry" className={styles.navIcon}>
+          Registry
+        </Link>
+        <Link to="/attendance" className={styles.navIcon}>
+          Attendance
+        </Link>
       </div>
     </>
-  )
+  );
 }
 
 export default NavBar;
