@@ -12,7 +12,8 @@
 
 .guestInstructions {
     color: #542D3B;
-    text-align: center
+    text-align: center;
+    width: 75%;
 }
 
 .guestHeader {
