@@ -3,10 +3,16 @@
 .attendanceScreen {
     min-height: 100vh;
     background-color: #FFB8D1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 .guestInstructions {
     color: #542D3B;
+    text-align: center
 }
 
 .guestHeader {
