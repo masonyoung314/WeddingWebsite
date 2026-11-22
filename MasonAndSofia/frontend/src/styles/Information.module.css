@@ -90,6 +90,7 @@ p {
 
 .imagesDiv {
     display: grid;
+    justify-content: center;
     width: 75%;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 0.5rem;

@@ -1,0 +1,54 @@
+.foodSection {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.imagesDiv {
+    display: grid;
+    width: 40%;
+    grid-template-columns: repeat(auto-fit, 200px);
+    justify-content: center;
+    gap: 1rem;
+}
+
+.img {
+    height: 200px;
+    width: 200px;
+    transition: 0.3s;
+    border-radius: 1rem;
+}
+
+.img:hover {
+    transform: translateY(-10px);
+}
+
+.link {
+    text-decoration: none;
+}
+
+.webButton {
+    width: 5rem;
+    height: 3rem;
+    border: 2px solid #542D3B;
+    border-radius: 0.5rem;
+    background-color: #FFF5F2;
+    margin-top: 1rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #542D3B;
+    transition: 0.3s;
+}
+
+.webButton:hover {
+    background-color: gray;
+    color: white;
+}
+
+.foodType, .foodInfo {
+    color: #542D3B;
+}
