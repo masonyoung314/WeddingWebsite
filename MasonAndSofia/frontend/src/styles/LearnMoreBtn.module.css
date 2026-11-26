@@ -1,0 +1,23 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid #542D3B;
+    text-decoration: none;
+    color: #542D3B;
+}
+
+.click {
+    color: #542D3B;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #542D3B;
+    color: white;
+}

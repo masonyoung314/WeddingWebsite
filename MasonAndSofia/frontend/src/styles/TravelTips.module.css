@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap');
+
 .travelTipsPage {
     display: flex;
     align-items: center;
@@ -28,4 +30,98 @@
     text-align: center;
     flex-direction: column;
     width: 100%;
+}
+
+.tenerifeImg {
+    width: 50rem;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.optionsGrid {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.gridImg {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gridImg:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.gridExtraInfo {
+    background-color: #542D3B;
+    color: white;
+    width: 100%;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    text-align: left;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.extraInfoTitle {
+    padding-bottom: 1rem;
+}
+
+.sectionTitle {
+    font-family: 'Cormorant', serif;
+    color: #542D3B;
+    font-style: italic;
+}
+
+.sections {
+    padding-top: 5rem;
+    width: 100%;
+}
+
+.natureSection {
+    padding-bottom: 1rem;
+}
+
+.placeSubSection {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.subSectionImg {
+    height: 35rem;
+    width: auto;
+    border-radius: 1rem;
+}
+
+.placeSubSectionInfo {
+    color: #542D3B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionSubInfo {
+    padding-bottom: 1rem;
+}
+
+p {
+    font-family: 'Cormorant', serif;
+}
+
+h2 {
+    font-family: 'Cormorant', serif;
 }
