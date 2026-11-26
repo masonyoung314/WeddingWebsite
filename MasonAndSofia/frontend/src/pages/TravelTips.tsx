@@ -1,6 +1,6 @@
 import styles from "../styles/TravelTips.module.css";
 import NavBar from '../components/NavBar';
-import LearnMoreBtn from "../components/LearnMoreBtn";
+import TravelPlacesTiles from "../components/TravelPlacesTiles";
 import TravelTipsFood from "../components/TravelTipsFood";
 import guachincheOne from '../assets/guachinche1.png';
 import guachincheTwo from '../assets/guachinche2.png';
@@ -20,13 +20,18 @@ import por3 from "../assets/PorSabor3.png";
 import grados1 from "../assets/grados1.png";
 import grados2 from "../assets/grados2.png";
 import grados3 from "../assets/grados3.png";
-import tenerife from '../assets/teide.jpg';
 import nature from '../assets/nature.jpg';
 import town from '../assets/laLaguna.jpeg';
 import touristCity from '../assets/puerto.jpeg';
 import shopping from '../assets/santaCruz.jpg';
 import teide from '../assets/teide.jpg';
 import anaga from '../assets/anaga.jpg';
+import laCaldera from '../assets/laCaldera.jpg';
+import map from '../assets/MapTenerife.jpg';
+import laLaguna2 from '../assets/LaLaguna2.jpg';
+import puertoCity from '../assets/puertoCity.jpg';
+import puertoBeach from '../assets/puertoBeach.jpg';
+import loroParque from '../assets/loroParque.jpg';
 
 const TravelTips = () => {
   return (
@@ -95,7 +100,7 @@ const TravelTips = () => {
                 <h2 className={styles.discover} style={{color: "#542D3B", paddingBottom: "1rem"}}><i>Discover Tenerife</i></h2>
                 <p style={{color: "#542D3B", paddingBottom: "1rem"}}>From beautiful landscapes and charming coastal towns to delicious food, there is a lot to explore in Tenerife. 
                     Here are some of our favorite places!</p>
-                <img src={tenerife} className={styles.tenerifeImg}/>
+                <img src={map} className={styles.tenerifeImg}/>
                 <h2 style={{color: "#542D3B", paddingTop: "1rem", paddingBottom: "1rem"}}>What would you like to do?</h2>
                 <div className={styles.optionsGrid}>
                     <div className={styles.gridImgContainer}>
@@ -135,43 +140,72 @@ const TravelTips = () => {
                         </div>
                     </div>
                 </div>
-                
-
             </div>
             <div className={styles.sections}>
                     <section id="nature" className={styles.sectionSection}>
                         <h2 className={styles.sectionTitle}>Nature & Adventure</h2>
                         <hr className={styles.sectionBreak} />
-                        <div className={styles.placeSubSection}>
-                            <img src={teide} className={styles.subSectionImg} />
-                            <div className={styles.placeSubSectionInfo}>
-                                <h2 className={styles.sectionSubTitle} style={{paddingBottom: "1rem"}}>Mount Teide</h2>
-                                <p className={styles.sectionSubInfo}>Visit Spain's highest mountain and experience the incredible volcanic landscapes.</p>
-                                <LearnMoreBtn link="https://www.volcanoteide.com/en"/>
-                            </div>
-
-                        </div>
-                        <hr className={styles.sectionBreak} />
-                        <div className={styles.placeSubSection}>
-                            <div className={styles.placeSubSectionInfo}>
-                                <h2 className={styles.sectionSubTitle} style={{paddingBottom: "1rem"}}>Parque Rural de Anaga</h2>
-                                <p className={styles.sectionSubInfo}>Visit ancient laurel forrests with sharp volcanic peaks, black sand beaches, and deep ravines in Tenerife's oldest region.</p>
-                                <LearnMoreBtn link="https://www.hellocanaryislands.com/nature-spaces/tenerife/anaga-rural-park/"/>
-                            </div>
-                            <img src={anaga} className={styles.subSectionImg} />
-
-                        </div>
-                        <hr className={styles.sectionBreak} />
+                        <TravelPlacesTiles 
+                        configuration={1}
+                        sectionSubTitle="Mount Teide"
+                        sectionSubInfo="Visit Spain's highest mountain and experience the incredible volcanic landscapes."
+                        img={teide}
+                        link="https://www.volcanoteide.com/en"
+                        />
+                        <TravelPlacesTiles 
+                        configuration={2}
+                        sectionSubTitle="Parque Rural de Anaga"
+                        sectionSubInfo="Visit ancient laurel forrests with sharp volcanic peaks, black sand beaches, and deep ravines in Tenerife's oldest region."
+                        img={anaga}
+                        link="https://www.hellocanaryislands.com/nature-spaces/tenerife/anaga-rural-park/"
+                        />
+                        <TravelPlacesTiles
+                        configuration={1}
+                        sectionSubTitle="La Caldera"
+                        sectionSubInfo="Visit a park in the mountain that serves as the trailhead for beautiful hiking trails through the monteverde forrests of Tenerife above the town of La Orotava."
+                        link="https://www.laorotava.es/turismo/en/la-caldera-recreational-area%EF%BF%BC%EF%BF%BC%EF%BF%BC/"
+                        img={laCaldera}
+                        />
                     </section>
                     
                     <section id="culture">
                         <h2 className={styles.sectionTitle}>Local Culture</h2>
                         <hr className={styles.sectionBreak} />
+                        <TravelPlacesTiles
+                        configuration={1}
+                        sectionSubTitle="La Laguna"
+                        sectionSubInfo="Visit the beautiful historic town of La Laguna to see old, narrow streets; traditional Canarian architecture; churches; and delicious cafés."
+                        link="https://www.hellocanaryislands.com/places-full-of-charm/tenerife/la-laguna-old-town/"
+                        img={laLaguna2}
+                        />
                     </section>
 
                     <section id="tourist">
                         <h2 className={styles.sectionTitle}>Walking & Other Tourism</h2>
                         <hr className={styles.sectionBreak} />
+                        <TravelPlacesTiles
+                        configuration={1}
+                        sectionSubTitle="Puerto de La Cruz"
+                        sectionSubInfo="Visit the city of Puerto de La Cruz for beautiful views, an abundance of shops and cafés, and even ice cream!"
+                        link="https://en.wikipedia.org/wiki/Puerto_de_la_Cruz"
+                        img={puertoCity}
+                        />
+
+                        <TravelPlacesTiles 
+                        configuration={2}
+                        sectionSubTitle="Puerto de La Cruz Beach"
+                        sectionSubInfo="Visit one of a few black sand beaches around Puerto de La Cruz for a relaxing afternoon in the sun."
+                        link="https://en.wikipedia.org/wiki/Puerto_de_la_Cruz"
+                        img={puertoBeach}
+                        />
+
+                        <TravelPlacesTiles
+                        configuration={1}
+                        sectionSubTitle="Loro Parque"
+                        sectionSubInfo="Visit the best zoo in the world located in Puerto de La Cruz for orca and dolphin shows, gorillas, and a whole host of other animals."
+                        link="https://www.loroparque.com/en/"
+                        img={loroParque}
+                        />
                     </section>
 
                     <section id="urban">

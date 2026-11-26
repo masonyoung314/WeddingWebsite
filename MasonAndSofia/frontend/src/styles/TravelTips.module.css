@@ -79,6 +79,8 @@
     font-family: 'Cormorant', serif;
     color: #542D3B;
     font-style: italic;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .sections {
@@ -90,33 +92,7 @@
     padding-bottom: 1rem;
 }
 
-.placeSubSection {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    width: 100%;
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
 
-.subSectionImg {
-    height: 35rem;
-    width: auto;
-    border-radius: 1rem;
-}
-
-.placeSubSectionInfo {
-    color: #542D3B;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.sectionSubInfo {
-    padding-bottom: 1rem;
-}
 
 p {
     font-family: 'Cormorant', serif;

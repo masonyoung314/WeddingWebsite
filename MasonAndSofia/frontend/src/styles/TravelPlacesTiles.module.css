@@ -1,0 +1,34 @@
+.placeSubSection {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.subSectionImg {
+    height: 35rem;
+    width: auto;
+    border-radius: 1rem;
+}
+
+.placeSubSectionInfo {
+    color: #542D3B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionSubInfo {
+    padding-bottom: 1rem;
+}
+
+.sectionBreak {
+    border: none;
+    width: 95%;
+    height: 2px;
+    background-color: #542D3B;
+}
