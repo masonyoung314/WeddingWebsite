@@ -33,7 +33,7 @@
 }
 
 .tenerifeImg {
-    width: 50rem;
+    width: 60rem;
     height: auto;
     border-radius: 1rem;
 }
@@ -90,6 +90,22 @@
 
 .natureSection {
     padding-bottom: 1rem;
+}
+
+.urbanSection {
+    margin-bottom: 3rem;
+}
+
+.backToTop {
+    text-decoration: none;
+    color: #542D3B;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.backToTop:hover {
+    color: white;
 }
 
 

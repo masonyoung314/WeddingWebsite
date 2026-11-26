@@ -32,13 +32,14 @@ import laLaguna2 from '../assets/LaLaguna2.jpg';
 import puertoCity from '../assets/puertoCity.jpg';
 import puertoBeach from '../assets/puertoBeach.jpg';
 import loroParque from '../assets/loroParque.jpg';
+import meridiano from '../assets/meridiano.jpeg';
 
 const TravelTips = () => {
   return (
     <>
         <div className={styles.travelTipsPage}>
             <NavBar />
-            <h2 className={styles.sectionHeader}>Food</h2>
+            <h2 className={styles.sectionHeader} id="food">Food</h2>
             <TravelTipsFood 
                 cuisine="Traditional Canarian Food" 
                 restaurant="Guachinche El Primero" 
@@ -94,7 +95,7 @@ const TravelTips = () => {
                 img3={grados3}
             />
 
-            <hr className={styles.sectionBreak} />
+            <hr className={styles.sectionBreak} style={{marginTop: "3rem", marginBottom: "3rem"}}/>
             <div className={styles.placeSection}>
                 <h2 className={styles.sectionHeader}>Places</h2>
                 <h2 className={styles.discover} style={{color: "#542D3B", paddingBottom: "1rem"}}><i>Discover Tenerife</i></h2>
@@ -208,11 +209,22 @@ const TravelTips = () => {
                         />
                     </section>
 
-                    <section id="urban">
+                    <section id="urban" className={styles.urbanSection}>
                         <h2 className={styles.sectionTitle}>Shopping & Urban Life</h2>
                         <hr className={styles.sectionBreak} />
+                        <TravelPlacesTiles
+                        configuration={1}
+                        sectionSubTitle="Meridiano Shopping Center"
+                        sectionSubInfo="Visit Meridiano Shopping Center in Santa Cruz to pick up all of your Spanish clothes needs."
+                        link="https://www.tenerifeexperiences.com/shopping/shopping-areas/cc-meridiano"
+                        img={meridiano}
+                        />  
                     </section>
                 </div>
+
+                <a href="#food" className={styles.backToTop}>
+                    Back to top
+                </a>
 
         </div>
     </>
