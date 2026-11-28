@@ -25,6 +25,8 @@ p {
     justify-content: center;
     align-items: center;
     padding-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .address {
@@ -32,6 +34,8 @@ p {
     padding-top: 2rem;
     font-family: 'Cormorant', serif;
     color: #542D3B;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .elegantText, .longDressesText, .visitPin {
@@ -86,6 +90,7 @@ p {
     border-radius: 1rem;
     width: 75%;
     margin-inline: auto;
+    margin-bottom: 3rem;
 }
 
 .imagesDiv {
