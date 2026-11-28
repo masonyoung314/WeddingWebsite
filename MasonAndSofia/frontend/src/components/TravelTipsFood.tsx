@@ -15,8 +15,8 @@ const TravelTipsFood = ({cuisine, restaurant, location, link, img1, img2, img3} 
     <>
         <div className={styles.foodSection}>
             <h3 className={styles.foodType}><b><i>{cuisine}</i></b></h3>
-            <h3 className={styles.foodInfo}><u>Restaurant:</u> {restaurant}</h3>
-            <h3 className={styles.foodInfo}><u>Location:</u>{location}</h3>
+            <h3 className={styles.foodInfo}><u>Restaurant:</u> {restaurant?.toUpperCase()}</h3>
+            <h3 className={styles.foodInfo}><u>Location:</u> {location}</h3>
             <div className={styles.imagesDiv}>
                 <img src={img1} className={styles.img} />
                 <img src={img2} className={styles.img} />
