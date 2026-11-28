@@ -136,7 +136,7 @@ const TravelTips = () => {
                             <img src={shopping} className={styles.gridImg} />
                         </a>
                         <div className={styles.gridExtraInfo}>
-                            <h2 className={styles.extraInfoTitle}>Shopping & Urban Life</h2>
+                            <h2 className={styles.extraInfoTitle}>Shopping & Urban</h2>
                             <p>Shopping, city (and Sofi's university)</p>
                         </div>
                     </div>

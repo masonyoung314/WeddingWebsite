@@ -109,6 +109,12 @@
 }
 
 
+@media (max-width: 780px) {
+    .gridImg {
+        height: 15rem;
+    }
+}
+
 
 p {
     font-family: 'Cormorant', serif;

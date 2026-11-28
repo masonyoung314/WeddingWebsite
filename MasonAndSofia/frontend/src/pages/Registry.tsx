@@ -16,7 +16,7 @@ function Registry({}: Props) {
       <div className={styles.registryPage}>
         <NavBar />
         <div className={styles.registryBelowNav}>
-          <h1>Registry</h1>
+          <h1 style={{color: "#542D3B"}}>Registry</h1>
           <div className={styles.registryCards}>
             <AmazonCards amazonLink='https://amzn.to/4r7y4vh' picture={sheets} />
             <AmazonCards amazonLink='https://amzn.to/4ypwxTB' picture={oven} />
@@ -25,7 +25,7 @@ function Registry({}: Props) {
             <AmazonCards amazonLink='https://link.amazon/B07wKcUQi' picture={airFryer} />
             <AmazonCards amazonLink='https://link.amazon/B0gEDeUcs' picture={blender} />
           </div>
-          <div className={styles.footer}>As an Amazon Affiliate, I earn from qualifying purchases.</div>
+          <div className={styles.footer} style={{color: "#542D3B"}}>As an Amazon Affiliate, I earn from qualifying purchases.</div>
         </div>
       </div>
     </>
